@@ -1,0 +1,712 @@
+{
+	"info": {
+		"_postman_id": "65c68540-90f9-4b63-9d63-b388eeee1d5d",
+		"name": "QA Dubovik site",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Get -/wp/v2/posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/posts?page=2&per_page=3&comment_status=open",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "per_page",
+									"value": "3"
+								},
+								{
+									"key": "comment_status",
+									"value": "open"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post -/wp/v2/posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/posts?status=publish&title=Mariia&content=string&comment_status=open",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "publish"
+								},
+								{
+									"key": "title",
+									"value": "Mariia"
+								},
+								{
+									"key": "content",
+									"value": "string"
+								},
+								{
+									"key": "comment_status",
+									"value": "open"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get -wp/v2/posts/id?",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/posts/1653?comment_status=open",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"posts",
+								"1653"
+							],
+							"query": [
+								{
+									"key": "comment_status",
+									"value": "open"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post - /wp/v2/posts/id?",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/posts/1559?status=publish&title=Summer time&comment_status=open&content=Summer Winter Spring",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"posts",
+								"1559"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "publish"
+								},
+								{
+									"key": "title",
+									"value": "Summer time"
+								},
+								{
+									"key": "comment_status",
+									"value": "open"
+								},
+								{
+									"key": "content",
+									"value": "Summer Winter Spring"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put - /wp/v2/posts/id?",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/posts/1571?status=publish&content=Есть много разных токенов. Обычные, криптографические, «access key», «session token», разные схемы получения, использования и revoke. При этом одна из ключевых идей заключается в том, что если кто нехороший получит чужой токен, то самое неприятное, что случится — это доступ похитителя к сервису, от которого токен похищен. Пароль, тот самый, который один на все сервисы, похититель не получит. А пользователь, если поймет, что кроме него к сервису получил доступ кто-то другой, может токен отозвать. После чего получить себе новый, имея логин и пароль.\n&title=Volf&comment_status=open",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"posts",
+								"1571"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "publish"
+								},
+								{
+									"key": "content",
+									"value": "Есть много разных токенов. Обычные, криптографические, «access key», «session token», разные схемы получения, использования и revoke. При этом одна из ключевых идей заключается в том, что если кто нехороший получит чужой токен, то самое неприятное, что случится — это доступ похитителя к сервису, от которого токен похищен. Пароль, тот самый, который один на все сервисы, похититель не получит. А пользователь, если поймет, что кроме него к сервису получил доступ кто-то другой, может токен отозвать. После чего получить себе новый, имея логин и пароль.\n"
+								},
+								{
+									"key": "title",
+									"value": "Volf"
+								},
+								{
+									"key": "comment_status",
+									"value": "open"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch - /wp/v2/posts/id?",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/posts/1653?status=publish&title=Sky&content=Sky&comment_status=open",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"posts",
+								"1653"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "publish"
+								},
+								{
+									"key": "title",
+									"value": "Sky"
+								},
+								{
+									"key": "content",
+									"value": "Sky"
+								},
+								{
+									"key": "comment_status",
+									"value": "open"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete - /wp/v2/posts/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/posts/id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"posts",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 1100ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1100);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"publish\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"open\");",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Get - /wp/v2/comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/comments?author_email=levkovskaya.masha@gmail.com&post=1559",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "author_email",
+									"value": "levkovskaya.masha@gmail.com"
+								},
+								{
+									"key": "post",
+									"value": "1559"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post - /wp/v2/comments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/comments?author_email=levkovskaya.masha@gmail.com&author_name=Sasha&content=Понятно, что ничего не понятно&post=1559",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "author_email",
+									"value": "levkovskaya.masha@gmail.com"
+								},
+								{
+									"key": "author_name",
+									"value": "Sasha"
+								},
+								{
+									"key": "content",
+									"value": "Понятно, что ничего не понятно"
+								},
+								{
+									"key": "post",
+									"value": "1559"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post - /wp/v2/comments&answers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/comments?author_email=levkovskaya.masha@gmail.com&author_name=дядя Жора&post=1559&parent=47&author_user_agent=Sasha&content=Странно!!!",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "author_email",
+									"value": "levkovskaya.masha@gmail.com"
+								},
+								{
+									"key": "author_name",
+									"value": "дядя Жора"
+								},
+								{
+									"key": "post",
+									"value": "1559"
+								},
+								{
+									"key": "parent",
+									"value": "47"
+								},
+								{
+									"key": "author_user_agent",
+									"value": "Sasha"
+								},
+								{
+									"key": "content",
+									"value": "Странно!!!"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get - /wp/v2/comments/id?",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/comments/42",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"comments",
+								"42"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post - /wp/v2/comments/id?",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/comments/47?author_email=levkovskaya.masha@gmail.com&author_name=Number 1&content=101010101010101010&post=1559",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"comments",
+								"47"
+							],
+							"query": [
+								{
+									"key": "author_email",
+									"value": "levkovskaya.masha@gmail.com"
+								},
+								{
+									"key": "author_name",
+									"value": "Number 1"
+								},
+								{
+									"key": "content",
+									"value": "101010101010101010"
+								},
+								{
+									"key": "post",
+									"value": "1559"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post - /wp/v2/comments&answers/id?",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/comments/51?author_email=levkovskaya.masha@gmail.com&author_name=001&post=1559&parent=48&author_user_agent=Sasha&content=Лето ах лето",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"comments",
+								"51"
+							],
+							"query": [
+								{
+									"key": "author_email",
+									"value": "levkovskaya.masha@gmail.com"
+								},
+								{
+									"key": "author_name",
+									"value": "001"
+								},
+								{
+									"key": "post",
+									"value": "1559"
+								},
+								{
+									"key": "parent",
+									"value": "48"
+								},
+								{
+									"key": "author_user_agent",
+									"value": "Sasha"
+								},
+								{
+									"key": "content",
+									"value": "Лето ах лето"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put - /wp/v2/comments/id?",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/comments/41?author_name=Masha L.&author_email=levkovskaya.masha@gmail.com&post=1559&content=ау ау ау ау ау",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"comments",
+								"41"
+							],
+							"query": [
+								{
+									"key": "author_name",
+									"value": "Masha L."
+								},
+								{
+									"key": "author_email",
+									"value": "levkovskaya.masha@gmail.com"
+								},
+								{
+									"key": "post",
+									"value": "1559"
+								},
+								{
+									"key": "content",
+									"value": "ау ау ау ау ау"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put - /wp/v2/comments&answers/id?",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/comments/41?author_email=levkovskaya.masha@gmail.com&author_name=12345&post=1559&parent=51&author_user_agent=Sasha&content=Whats going on!",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"comments",
+								"41"
+							],
+							"query": [
+								{
+									"key": "author_email",
+									"value": "levkovskaya.masha@gmail.com"
+								},
+								{
+									"key": "author_name",
+									"value": "12345"
+								},
+								{
+									"key": "post",
+									"value": "1559"
+								},
+								{
+									"key": "parent",
+									"value": "51"
+								},
+								{
+									"key": "author_user_agent",
+									"value": "Sasha"
+								},
+								{
+									"key": "content",
+									"value": "Whats going on!"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch - /wp/v2/comment/id?",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/comments/50?author_email=levkovskaya.masha@gmail.com&author_name=Vasya&post=1559&parent=41&author_user_agent=Vasya&content=Шо робить?",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"comments",
+								"50"
+							],
+							"query": [
+								{
+									"key": "author_email",
+									"value": "levkovskaya.masha@gmail.com"
+								},
+								{
+									"key": "author_name",
+									"value": "Vasya"
+								},
+								{
+									"key": "post",
+									"value": "1559"
+								},
+								{
+									"key": "parent",
+									"value": "41"
+								},
+								{
+									"key": "author_user_agent",
+									"value": "Vasya"
+								},
+								{
+									"key": "content",
+									"value": "Шо робить?"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete - /wp/v2/comments/id?",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wp/v2/comments/50",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wp",
+								"v2",
+								"comments",
+								"50"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 600ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);",
+							"});"
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "!@#QWEASD",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "api_test",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "www.dubovyk.kharkiv.ua/wp-json",
+			"type": "string"
+		}
+	]
+}
